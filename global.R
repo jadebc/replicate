@@ -5,7 +5,8 @@
 ######################################
 rm(list=ls())
 
-setwd("~/Documents/CRG/replicate-shiny-example")
+# Simulate data for example objects
+source("simulate.R")
 
 # list all objects in directory 
 objects <- list.files(path=paste(getwd(),"/Data",sep=""))
