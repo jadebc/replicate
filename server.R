@@ -10,12 +10,6 @@ function(input, output, session) {
     if (input$Outcome != "All") {
       data <- data[data$Outcome == input$Outcome,]
     }
-    if (input$Time != "All") {
-      data <- data[data$Time == input$Time,]
-    }
-    if (input$Hypothesis != "All") {
-      data <- data[data$Hypothesis == input$Hypothesis,]
-    }
     if (input$Measure != "All") {
       data <- data[data$Measure == input$Measure,]
     }
@@ -43,7 +37,7 @@ function(input, output, session) {
   output$view1 <- renderTable({
     dataset <- datasetInput()
     
-    rep1data= get(paste(dataset,"_j",sep=""))
+    rep1data= get(paste(dataset,"_A",sep=""))
     
     print(rep1data)
     
@@ -53,7 +47,7 @@ function(input, output, session) {
   output$view2 <- renderTable({
     dataset <- datasetInput()
     
-    rep2data= get(paste(dataset,"_A",sep=""))
+    rep2data= get(paste(dataset,"_B",sep=""))
     
     print(rep2data)
     
@@ -63,8 +57,8 @@ function(input, output, session) {
   output$view3 <- renderTable({
     dataset <- datasetInput()
     
-    rep1data= get(paste(dataset,"_j",sep=""))
-    rep2data= get(paste(dataset,"_A",sep=""))
+    rep1data= get(paste(dataset,"_A",sep=""))
+    rep2data= get(paste(dataset,"_B",sep=""))
     diff = rep1data-rep2data
     
     print(diff)

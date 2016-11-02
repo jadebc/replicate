@@ -1,5 +1,5 @@
 
-navbarPage("WASH Benefits Kenya Replication Dashboard",
+navbarPage("Example Replication Dashboard",
            tabPanel("Compare",
                     fluidRow(
                       column(4,
@@ -7,18 +7,6 @@ navbarPage("WASH Benefits Kenya Replication Dashboard",
                                          "Outcome:",
                                          c("All",
                                            unique(as.character(display$Outcome))))
-                      ),
-                      column(4,
-                             selectInput("Time",
-                                         "Time:",
-                                         c("All",
-                                           unique(as.character(display$Time))))
-                      ),
-                      column(4,
-                             selectInput("Hypothesis",
-                                         "Hypothesis:",
-                                         c("All",
-                                           unique(as.character(display$Hypothesis))))
                       ),
                       column(4,
                              selectInput("Measure",
@@ -58,16 +46,16 @@ navbarPage("WASH Benefits Kenya Replication Dashboard",
                       sidebarPanel(
                         
                         textInput("text", label = h3("Display specific object"), 
-                                  value = "wast_t2_h3_pr_adj")
+                                  value = "prop.y")
                         
                       ),
                       
                       # Print object for each replicator as html table
                       mainPanel(
                         
-                        h4("Jade:"),
+                        h4("A:"),
                         tableOutput("view1"),
-                        h4("Andrew:"),
+                        h4("B:"),
                         tableOutput("view2"),
                         h4("Difference:"),
                         tableOutput("view3")
