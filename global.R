@@ -9,11 +9,14 @@ rm(list=ls())
 source("simulate.R")
 
 # list all objects in directory 
-objects <- list.files(path=paste(getwd(),"/Data",sep=""))
+objects <- list.files(path=getwd())
+
+# subset list to RData objects
+objects = objects[grep(".RData",objects)]
 
 # load all objects in directory
 for(i in 1:length(objects)) {
-  load(paste(getwd(),"/Data/",objects[i],sep=""))
+  load(paste(getwd(),"/",objects[i],sep=""))
 }
 
 # list of object names with no suffix
