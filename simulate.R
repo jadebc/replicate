@@ -63,10 +63,10 @@ rr.x.adj_B=exp(summary(glm(x~tr+w,data=data2,family="binomial"(link=log)))$coef[
 
 save(prop.y_A,rr.y_A,rr.y.adj_A,
      prop.x_A,rr.x_A,rr.x.adj_A,
-    file=paste(getwd(),"results_A.RData",sep=""))
+    file=paste(getwd(),"/results_A.RData",sep=""))
 
 save(prop.y_B,rr.y_B,rr.y.adj_B,
      prop.x_B,rr.x_B,rr.x.adj_B,
-     file=paste(getwd(),"results_B.RData",sep=""))
+     file=paste(getwd(),"/results_B.RData",sep=""))
 
 
