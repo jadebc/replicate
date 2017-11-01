@@ -1,6 +1,6 @@
 This repository includes R scripts for a Shiny app that compares analysis objects created by two analysts for the purpose of internal replication. The three scripts in this repository can be used to launch the Shiny R app within RStudio, which can also be published as a website. 
 
-**How to run the Shiny app**: Open either ui.R or server.R in RStudio. Click the green arrow button that says "Run App" in the upper right hand corner of the code console. 
+**How to run the Shiny app**: Open either ui.R or server.R in RStudio. Click the green arrow button that says "Run App" in the upper right hand corner of the code console. Alternatively, you can publish the app as a website hosted on shinyapps.io or elsewhere.
 
 **Description of scripts**
 * **simulate.R**: This script creates an example dataset that could be analyzed by two hypothetical analysts (A and B). It saves two sets of objects and intentionally includes an "error" in Analyst B's data cleaning process so that the analyses are not fully replicated. 
